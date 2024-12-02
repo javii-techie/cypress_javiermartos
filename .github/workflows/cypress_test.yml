@@ -11,6 +11,10 @@ jobs:
 
     steps:
 
-      # Paso 4: Ejecutar las pruebas de Cypress
+      # Paso 1: Hacer checkout del código
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Paso 2: Ejecutar las pruebas de Cypress
       - name: Run Cypress tests
         run: npx cypress run --headless --browser chrome

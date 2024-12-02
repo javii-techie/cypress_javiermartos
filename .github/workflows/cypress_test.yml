@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Paso 1: Hacer checkout del código
-      - name: Checkout repository
-        uses: actions/checkout@v2
 
       # Paso 4: Ejecutar las pruebas de Cypress
       - name: Run Cypress tests

@@ -14,17 +14,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Paso 2: Configurar Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
-
-      # Paso 3: Instalar dependencias
-      - name: Install dependencies
-        run: |
-          npm ci  
-
       # Paso 4: Ejecutar las pruebas de Cypress
       - name: Run Cypress tests
         run: npx cypress run --headless --browser chrome
